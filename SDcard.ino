@@ -26,7 +26,7 @@ void loop() {
       if (dataFile) {
         dataFile.println(userInput);
         dataFile.close();
-        Serial.println("Data saved to SD card.");
+        Serial.println("test data saved.");
       } else {
         Serial.println("Error opening file.");
       }
