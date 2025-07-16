@@ -10,8 +10,8 @@ char keys[ROWS][COLS] = {
   {'P','N','C','S'}
 };
 
-byte pin_rows[ROWS] = {22, 24, 26, 28};
-byte pin_column[COLS] = {23, 25, 27, 29};
+byte pin_rows[ROWS] = {29, 31, 33, 35};
+byte pin_column[COLS] = {37, 39, 41, 43};
 
 Keypad customKeypad = Keypad(makeKeymap(keys), pin_rows, pin_column, ROWS, COLS);
 
@@ -22,13 +22,13 @@ void setup() {
 void loop() {
   char key = customKeypad.getKey();
   if (key) {
-    if (key == 'Prev') {
+    if (key == 'P') {
       Serial.println("Previous");
-    } else if (key == 'NXT') {
+    } else if (key == 'N') {
       Serial.println("Next");
-    } else if (key == 'CLR') {
+    } else if (key == 'C') {
       Serial.println("Clear");
-    } else if (key == 'Save') {
+    } else if (key == 'S') {
       Serial.println("Save");
     } else {
       Serial.println(key);
